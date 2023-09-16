@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Style for the floating window */
+        .floating-window {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            z-index: 9999;
+            display: none;
+        }
+
+        /* Style for the picture */
+        .picture {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <img src="your-picture.jpg" alt="Picture" class="picture" onclick="openFloatingWindow()">
+
+    <div id="floatingWindow" class="floating-window">
+        <p>This is the floating window text.</p>
+    </div>
+
+    <script>
+        function openFloatingWindow() {
+            var floatingWindow = document.getElementById("floatingWindow");
+            floatingWindow.style.display = "block";
+        }
+    </script>
+</body>
+</html>
